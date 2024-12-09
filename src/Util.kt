@@ -100,3 +100,13 @@ fun <T> bfsSteps(start: T, stepsMax: Int, isValid: (T) -> Boolean, next: (T) -> 
 
     return setOf()
 }
+
+fun List<String>.at(i: Pair<Int, Int>): Char {
+    return this[i.first][i.second]
+}
+
+fun List<String>.isInside(i: Pair<Int, Int>): Boolean {
+    return i.first in this.indices && i.second in this[0].indices
+}
+
+fun IntRange.length(): Int = last - first + 1
