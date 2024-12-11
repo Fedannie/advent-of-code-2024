@@ -1,7 +1,7 @@
 package Day08
 
 import at
-import isInside
+import isInsideStr
 import println
 import readInput
 
@@ -15,8 +15,8 @@ fun main() {
             val antinode1 = antenna2.first + delta.first to antenna2.second + delta.second
             val antinode2 = antenna1.first - delta.first to antenna1.second - delta.second
             val result = mutableListOf<Pair<Int, Int>>()
-            if (field.isInside(antinode1)) result.add(antinode1)
-            if (field.isInside(antinode2)) result.add(antinode2)
+            if (field.isInsideStr(antinode1)) result.add(antinode1)
+            if (field.isInsideStr(antinode2)) result.add(antinode2)
             return result
         }
 
@@ -43,8 +43,8 @@ fun main() {
                 previousSize = result.size
                 val antinode1 = antenna2.first + delta.first * i to antenna2.second + delta.second * i
                 val antinode2 = antenna1.first - delta.first * i to antenna1.second - delta.second * i
-                if (field.isInside(antinode1)) result.add(antinode1)
-                if (field.isInside(antinode2)) result.add(antinode2)
+                if (field.isInsideStr(antinode1)) result.add(antinode1)
+                if (field.isInsideStr(antinode2)) result.add(antinode2)
                 i++
             }
 

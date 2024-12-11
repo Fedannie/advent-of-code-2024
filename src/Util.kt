@@ -105,7 +105,15 @@ fun List<String>.at(i: Pair<Int, Int>): Char {
     return this[i.first][i.second]
 }
 
-fun List<String>.isInside(i: Pair<Int, Int>): Boolean {
+fun <T> List<List<T>>.at(i: Pair<Int, Int>): T {
+    return this[i.first][i.second]
+}
+
+fun List<String>.isInsideStr(i: Pair<Int, Int>): Boolean {
+    return i.first in this.indices && i.second in this[0].indices
+}
+
+fun List<List<Int>>.isInside(i: Pair<Int, Int>): Boolean {
     return i.first in this.indices && i.second in this[0].indices
 }
 
