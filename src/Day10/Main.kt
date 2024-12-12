@@ -2,12 +2,11 @@ package Day10
 
 import at
 import isInside
+import next
 import println
 import readInput
 
 fun main() {
-    fun next(current: Pair<Int, Int>) = listOf(current.first - 1 to current.second, current.first + 1 to current.second, current.first to current.second - 1, current.first to current.second + 1)
-
     fun getHikesDfs(field: List<List<Int>>, current: Pair<Int, Int>): Int {
         var result = 0
         if (field.at(current) == 9) {
