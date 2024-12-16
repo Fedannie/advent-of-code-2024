@@ -118,3 +118,9 @@ fun List<List<Int>>.isInside(i: Pair<Int, Int>): Boolean {
 }
 
 fun IntRange.length(): Int = last - first + 1
+
+fun next(current: Pair<Int, Int>) = listOf(current.first - 1 to current.second, current.first + 1 to current.second, current.first to current.second - 1, current.first to current.second + 1)
+
+operator fun Pair<Int, Int>.plus(other: Pair<Int, Int>) = first + other.first to second + other.second
+
+operator fun Pair<Int, Int>.times(other: Int) = first * other to second * other
